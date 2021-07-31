@@ -23,7 +23,7 @@
 }
 
 .input-details{
-  color: white;
+  color: darkgray;
 }
 
 label {
@@ -34,4 +34,5 @@ label {
 .Input {
   width: 25%;
   display: inline-block;
+  color: darkgray;
 }
