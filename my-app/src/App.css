@@ -1,34 +1,93 @@
-.App{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+ 
+ .App{
   display: flex;
   flex-direction: row;
-  /* flex-grow: ; */
-}
+  font-family: 'Poppins', sans-serif;
+} 
 
 #addTaskTab{
   width: 30%;
   height: 100vh;
   display: inline-block;
-  color: blue;
+  color: darkslategray;
+
   background-color: white;
-  
+    
 }
 
 #timeTable {
   width: 70%;
   height: 100vh;
   display: inline-block;
+  color: darkslategrey;
+  background-color: white;
 }
 
-.input-details{
-  color: darkblue;
+.TaskTab {
+  text-align: center;
 }
 
-label {
-  margin: 0px;
-  border: 0px;
+.TaskTab h1 
+{
+  padding: 5px;
+  margin:20px;
+  /* color: red; */
 }
 
-.Input {
-  width: 25%;
-  display: inline-block;
+.input-details label{
+  /* text-align: center; */
+  display: block;
+
+  
+}
+
+.add-form{
+  margin:5px;
+}
+
+.add-form div{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+
+.add-form label{
+  padding-bottom: 5px;
+}
+
+.submit-button{
+  border-width: 2px;
+  margin: 25px;
+  padding: 5px;
+}
+
+Input {
+  background-color: white;
+}
+
+.Timetable table {
+  color: red;
+}
+
+eventTextColor{
+  color: red;
+}
+
+.fc-view-harness {
+  background-color:rgb(245, 245, 245);
+}
+
+.fc-col-header-cell-cushion  {
+  /* background-color: ; */
+  color: darkslategray;
+  
+}
+
+.fc-daygrid-day-frame {
+  color: red;
+}
+
+.fc-daygrid-day fc-day fc-day-sat fc-day-today {
+  color: red;
 }
