@@ -1,21 +1,30 @@
-
-#addTaskTab{
-  width: 30%;
-  display: inline-block;
-}
-
-#timeTable {
-  width: 70%;
-  display: inline-block;
-}
-
-
 .App{
   display: flex;
   flex-direction: row;
   /* flex-grow: ; */
 }
 
+#addTaskTab{
+  width: 30%;
+  height: 100vh;
+  display: inline-block;
+}
+
+#timeTable {
+  width: 70%;
+  height: 100vh;
+  display: inline-block;
+}
+
 .input-details{
   color: darkblue;
+}
+
+label {
+  margin: 0px;
+  border: 0px;
+}
+
+input{
+ 
 }
