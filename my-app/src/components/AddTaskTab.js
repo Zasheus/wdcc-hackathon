@@ -1,7 +1,13 @@
+import TaskInput from "./TaskInput"
+
+
 const AddTaskTab = () => {
     return (
         <div className="TaskTab">
-            <p>ADD STUFF...</p>
+            <h1>INSERT TITLE </h1>
+
+            <TaskInput/>
+
         </div>
     )
 }
