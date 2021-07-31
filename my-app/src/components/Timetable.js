@@ -12,7 +12,8 @@ export default class Timetable extends Component{
     
         this.Timetab = this.Timetab.bind(this);
     
-        this.state = {event:[]};
+        this.state = {event:[],
+                    cramday:[]};
       }
       componentDidMount() {
         var tasks;
@@ -23,7 +24,7 @@ export default class Timetable extends Component{
             tasks = response.data;
             var yearWeek;
             tasks.forEach(function (value,i){
-                yearWeek = `${moment(value.dueTime).year()}-${moment(value.dueTime).week()}`;
+                yearWeek = `${moment(value.dueTime).year()}-${moment(value.dueTime).isoWeek()}`;
                 if (!tasksSorted[yearWeek]) {
                     tasksSorted[yearWeek]=[value];
                 }
@@ -46,6 +47,9 @@ export default class Timetable extends Component{
                     dayInTheWeek.push(moment(tasksSorted[i][j].dueTime));
                 }
                 var startDay = moment.min(dayInTheWeek).format('YYYY-MM-DDT23:59:59');
+                if (!moment().diff(startDay,'week')){
+                    this.setState({cramday:startDay})
+                }
                 for(let j in tasksSorted[i]){
                     var color = '#FF0000';
                     if (moment().diff(startDay,'day')){
@@ -57,8 +61,9 @@ export default class Timetable extends Component{
                     startDay=startTime;
                 }
             }
-            console.log(cramEvents);
+            console.log(moment(this.state.cramday).day());
             this.setState({event:cramEvents})
+            
         })
         .catch((error) => {
           console.log(error);
@@ -87,6 +92,7 @@ export default class Timetable extends Component{
                 initialView="timeGridWeek"
                 events={this.state.event}
                 allDaySlot = {false}
+                weekNumberCalculation={'ISO'}
                 />
             </div>
             
