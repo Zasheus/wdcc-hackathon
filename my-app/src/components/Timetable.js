@@ -24,7 +24,7 @@ export default class Timetable extends Component{
             tasks = response.data;
             var yearWeek;
             tasks.forEach(function (value,i){
-                yearWeek = `${moment(value.dueTime).year()}-${moment(value.dueTime).week()}`;
+                yearWeek = `${moment(value.dueTime).year()}-${moment(value.dueTime).isoWeek()}`;
                 if (!tasksSorted[yearWeek]) {
                     tasksSorted[yearWeek]=[value];
                 }
@@ -92,6 +92,7 @@ export default class Timetable extends Component{
                 initialView="timeGridWeek"
                 events={this.state.event}
                 allDaySlot = {false}
+                weekNumberCalculation={'ISO'}
                 />
             </div>
             
