@@ -11,13 +11,15 @@ function App() {
     
     <div className="App">
       
-      <Timetable/>
 
-      <AddTaskTab/>
+      <div id="addTaskTab"><AddTaskTab/></div>
+
+      <div id="timeTable">
+      <Timetable/>
+      </div>
 
       <header className="App-header">
-      <h1>Hello World</h1>
-      <h1>!!!!!!!!!!!</h1>
+
       </header>
     </div>
   );

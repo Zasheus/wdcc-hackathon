@@ -9,6 +9,19 @@
   color: black;
 }
 
+
+
+#addTaskTab{
+  width: 25%;
+  display: inline-block;
+}
+
+#timeTable {
+  width: 75%;
+  display: inline-block;
+}
+
+
 .App{
   display: flex;
   flex-direction: row;
