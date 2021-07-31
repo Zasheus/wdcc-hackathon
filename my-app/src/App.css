@@ -1,29 +1,34 @@
-.TaskTab {
-  color: lightgray;
-}
-
-.Timetable {
-  width: 50%;
-  border: 10px;
-  /* border-color: cyan; */
-  color: black;
-}
-
-
-
-#addTaskTab{
-  width: 25%;
-  display: inline-block;
-}
-
-#timeTable {
-  width: 75%;
-  display: inline-block;
-}
-
-
 .App{
   display: flex;
   flex-direction: row;
   /* flex-grow: ; */
+}
+
+#addTaskTab{
+  width: 30%;
+  height: 100vh;
+  display: inline-block;
+  color: blue;
+  background-color: white;
+  
+}
+
+#timeTable {
+  width: 70%;
+  height: 100vh;
+  display: inline-block;
+}
+
+.input-details{
+  color: darkblue;
+}
+
+label {
+  margin: 0px;
+  border: 0px;
+}
+
+.Input {
+  width: 25%;
+  display: inline-block;
 }
