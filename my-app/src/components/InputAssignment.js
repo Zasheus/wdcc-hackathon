@@ -20,7 +20,7 @@ const InputAssignment = () => {
             return
         }
 
-        axios.post('http://localhost:5000/tasks/add',{text,date,time})
+        axios.post('http://localhost:5000/tasks/add',task).then(res => console.log(res.data));
         alert('ASSIGNMENT SUBMITTED')
 
     }
