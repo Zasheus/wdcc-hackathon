@@ -49,7 +49,7 @@ export default function CustomizedMenus() {
   };
 
   return (
-    <div>
+    <div className = 'cram-day-button'>
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
