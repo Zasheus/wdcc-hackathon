@@ -47,7 +47,7 @@ export default class Timetable extends Component{
                 }
                 var startDay = moment.min(dayInTheWeek).format('YYYY-MM-DDT23:59:59');
                 for(let j in tasksSorted[i]){
-                    var startTime = moment(startDay).subtract(2,'hours').format("YYYY-MM-DDTHH:mm:ss");
+                    var startTime = moment(startDay).subtract(tasksSorted[i][j].timeNeed,'hours').format("YYYY-MM-DDTHH:mm:ss");
                     cramEvents.push({title:tasksSorted[i][j].taskName,start:startTime,end:startDay,durationEditable:'true'})
                     startDay=startTime;
                 }
