@@ -38,7 +38,6 @@
 .input-details label{
   /* text-align: center; */
   display: block;
-
   
 }
 
@@ -52,13 +51,20 @@
   padding: 7px;
 }
 
+
+
 .add-form label{
   padding-bottom: 5px;
 }
 
+.input-details input{
+  width:225px;
+}
+
 .submit-button{
   border-width: 2px;
-  margin: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   padding: 5px;
 }
 
@@ -71,10 +77,6 @@ Input {
   color: darkslategray;
 }
 
-eventTextColor{
-  color: red;
-}
-
 .fc-view-harness {
   background-color:rgb(245, 245, 245);
 }
@@ -84,16 +86,4 @@ eventTextColor{
   /* background-color: ; */
   color: darkslategray;
   
-}
-
-.fc-daygrid-day-frame {
-  color: red;
-}
-
-.fc-daygrid-day fc-day fc-day-sat fc-day-today {
-  color: red;
-}
-
-.fc-timegrid.fc-timeGridWeek-view.fc-view{
-  color:red;
 }
