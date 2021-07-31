@@ -8,6 +8,9 @@
   width: 30%;
   height: 100vh;
   display: inline-block;
+  color: blue;
+  background-color: brown;
+  
 }
 
 #timeTable {
@@ -25,6 +28,7 @@ label {
   border: 0px;
 }
 
-input{
- 
+.Input {
+  width: 25%;
+  display: inline-block;
 }
