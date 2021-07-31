@@ -9,7 +9,7 @@ const AddTaskTab = () => {
     return (
         <div className="TaskTab">
 
-            <h1>INSERT TITLE </h1>
+            <h1>Cram Timetable Planner </h1>
 
             <TaskInput/>
 
