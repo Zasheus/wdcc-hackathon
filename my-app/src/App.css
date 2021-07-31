@@ -1,7 +1,12 @@
-
+.App{
+  display: flex;
+  flex-direction: row;
+  /* flex-grow: ; */
+}
 
 #addTaskTab{
-  width: 25%;
+  width: 30%;
+  height: 100vh;
   display: inline-block;
   color: blue;
   background-color: brown;
@@ -9,15 +14,18 @@
 }
 
 #timeTable {
-  width: 75%;
+  width: 70%;
+  height: 100vh;
   display: inline-block;
 }
 
+.input-details{
+  color: darkblue;
+}
 
-.App{
-  display: flex;
-  flex-direction: row;
-  /* flex-grow: ; */
+label {
+  margin: 0px;
+  border: 0px;
 }
 
 .Input {
