@@ -9,7 +9,7 @@ function Timetable() {
         <div className = "Timetable">
             <FullCalendar 
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            initialView="dayGridWeek"/>
+            initialView="timeGridWeek"/>
         </div>
     );
 }
