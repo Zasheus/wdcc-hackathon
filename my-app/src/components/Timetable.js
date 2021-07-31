@@ -64,6 +64,20 @@ export default class Timetable extends Component{
           console.log(error);
         })
       }
+      generateRandomDistraction(){
+          let distractions = ['Facebook','Youtube','Netflix','Twitter','Twitch',]
+
+          let getPosition = Math.floor(Math.random * distractions.length)
+
+          for(let i = 0; i<distractions.length; i++){
+              if(i == getPosition){
+                  return distractions[i]
+              }
+          }
+
+          return ('Empty')
+
+      }
       Timetab() {
         return(
             
