@@ -36,7 +36,7 @@ const InputAssignment = () => {
             </div>
             <div className = "input-details">
                 <label>Due Date:</label>
-                <input type = "text" placeholder="Add Due Date" 
+                <input type = "date" placeholder="Add Due Date" 
                 value = {date}
                 onChange={(e) => setDate(e.target.value)}
                 />
