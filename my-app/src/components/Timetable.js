@@ -64,10 +64,11 @@ export default class Timetable extends Component{
             
             <div className = "Timetable">
                 <FullCalendar
-      plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin]}
-      initialView="timeGridWeek"
-      events={this.state.event}
-    />
+                plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                initialView="timeGridWeek"
+                events={this.state.event}
+                allDaySlot = {false}
+                />
             </div>
             
         )

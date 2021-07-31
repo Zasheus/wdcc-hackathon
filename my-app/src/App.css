@@ -66,8 +66,9 @@ Input {
   background-color: white;
 }
 
+/*  */
 .Timetable table {
-  color: red;
+  color: darkslategray;
 }
 
 eventTextColor{
@@ -78,6 +79,7 @@ eventTextColor{
   background-color:rgb(245, 245, 245);
 }
 
+/*  */
 .fc-col-header-cell-cushion  {
   /* background-color: ; */
   color: darkslategray;
@@ -90,4 +92,8 @@ eventTextColor{
 
 .fc-daygrid-day fc-day fc-day-sat fc-day-today {
   color: red;
+}
+
+.fc-timegrid.fc-timeGridWeek-view.fc-view{
+  color:red;
 }
