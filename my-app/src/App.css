@@ -1,11 +1,11 @@
 
 #addTaskTab{
-  width: 25%;
+  width: 30%;
   display: inline-block;
 }
 
 #timeTable {
-  width: 75%;
+  width: 70%;
   display: inline-block;
 }
 
@@ -17,5 +17,5 @@
 }
 
 .input-details{
-  color: green;
+  color: darkblue;
 }
