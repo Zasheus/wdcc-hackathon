@@ -22,6 +22,7 @@
   display: inline-block;
   color: darkslategrey;
   background-color: white;
+  
 }
 
 .TaskTab {
@@ -80,6 +81,7 @@ Input {
 
 .fc-view-harness {
   background-color:rgb(245, 245, 245);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.10);
 }
 
 /*  */
@@ -100,3 +102,6 @@ Input {
   padding-bottom: 20px;
 }
 
+.fc {
+  margin-right: 20px;
+}
