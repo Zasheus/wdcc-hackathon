@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
+my-app/node_modules/.cache/.eslintcache
+my-app/back_end/package.json

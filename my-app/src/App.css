@@ -1,38 +1,110 @@
-.App{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+ 
+ .App{
   display: flex;
   flex-direction: row;
-  /* flex-grow: ; */
-}
+  font-family: 'Poppins', sans-serif;
+} 
 
 #addTaskTab{
   width: 30%;
   height: 100vh;
   display: inline-block;
-  color: white;
-  background-color:black;
-  
+  color: darkslategray;
+
+  background-color: white;
+    
 }
 
 #timeTable {
   width: 70%;
   height: 100vh;
   display: inline-block;
-  background-color:black;
-  color: white;
+  color: darkslategrey;
+  background-color: white;
   
 }
 
-.input-details{
-  color: darkgray;
+.TaskTab {
+  text-align: center;
 }
 
-label {
-  margin: 0px;
-  border: 0px;
+.TaskTab h1 
+{
+  padding: 5px;
+  margin:20px;
+  /* color: red; */
 }
 
-.Input {
-  width: 25%;
-  display: inline-block;
-  color: darkgray;
+.input-details label{
+  /* text-align: center; */
+  display: block;
+  
+}
+
+.add-form{
+  margin:5px;
+}
+
+.add-form div{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+
+
+
+.add-form label{
+  padding-bottom: 5px;
+}
+
+.input-details input{
+  width:225px;
+}
+
+.submit-button{
+  border-width: 2px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 5px;
+}
+
+Input {
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.10);
+}
+
+/*  */
+.Timetable table {
+  color: darkslategray;
+}
+
+.fc-view-harness {
+  background-color:rgb(245, 245, 245);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.10);
+}
+
+/*  */
+.fc-col-header-cell-cushion  {
+  /* background-color: ; */
+  color: darkslategray;
+  pointer-events:none
+  
+}
+
+.cram-day-button {
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.countdown h3{
+  /* margin: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.fc {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }

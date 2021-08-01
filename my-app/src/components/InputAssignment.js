@@ -19,16 +19,16 @@ const InputAssignment = () => {
             alert('Please add assignment')
             return
         }
-
+        task.timeNeed = task.timeNeed/2
         axios.post('http://localhost:5000/tasks/add',task).then(res => console.log(res.data));
         alert('ASSIGNMENT SUBMITTED')
-
+        window.location.reload(false);
     }
 
     return (
         <form className='add-form' onSubmit={onSubmit}>
             <div className = "input-details">
-                <label>Assignment Name:</label>
+                <label>Assignment:</label>
                 <input type = "text" placeholder="Add Assignment Name" 
                 value = {text}
                 onChange={(e) => setText(e.target.value)}
@@ -36,20 +36,20 @@ const InputAssignment = () => {
             </div>
             <div className = "input-details">
                 <label>Due Date:</label>
-                <input type = "text" placeholder="Add Due Date" 
+                <input type = "date" placeholder="Add Due Date" 
                 value = {date}
                 onChange={(e) => setDate(e.target.value)}
                 />
             </div>
             <div className = "input-details">
-                <label>Time Needed:</label>
-                <input type = "number" placeholder=" Time Required to Finish Assignment(In Minutes)" 
+                <label>Hours Needed:</label>
+                <input type = "number" placeholder=" Time Required" 
                 value = {time}
                 onChange={(e) => setTime(e.target.value)}
                 />
             </div>
 
-            <input type='submit' value='Add Assignment to Calender' className='submit-button'/>
+            <input type='submit' value='Add Assignment to Calendar' className='submit-button'/>
 
         </form>
         
