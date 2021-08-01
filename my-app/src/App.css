@@ -70,6 +70,7 @@
 
 Input {
   background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.10);
 }
 
 /*  */
@@ -87,3 +88,15 @@ Input {
   color: darkslategray;
   
 }
+
+.cram-day-button {
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.countdown h3{
+  /* margin: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
