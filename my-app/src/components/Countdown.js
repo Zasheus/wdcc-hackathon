@@ -11,7 +11,6 @@ const Countdown = () => {
 
             <GetRemainingTime/>
 
-            <div>XDDD </div>
 
             {/* Get info from data base. */}
 
