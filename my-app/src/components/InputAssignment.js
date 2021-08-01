@@ -19,10 +19,10 @@ const InputAssignment = () => {
             alert('Please add assignment')
             return
         }
-
+        task.timeNeed = task.timeNeed/2
         axios.post('http://localhost:5000/tasks/add',task).then(res => console.log(res.data));
         alert('ASSIGNMENT SUBMITTED')
-
+        window.location.reload(false);
     }
 
     return (

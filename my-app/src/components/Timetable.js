@@ -11,9 +11,11 @@ export default class Timetable extends Component{
         super(props);
     
         this.Timetab = this.Timetab.bind(this);
+        this.generateRandomDistraction = this.generateRandomDistraction.bind(this);
     
         this.state = {event:[],
-                    cramday:[]};
+                    cramday:[],
+                    chillDays:[]};
       }
       componentDidMount() {
         var tasks;
@@ -47,12 +49,12 @@ export default class Timetable extends Component{
                     dayInTheWeek.push(moment(tasksSorted[i][j].dueTime));
                 }
                 var startDay = moment.min(dayInTheWeek).format('YYYY-MM-DDT23:59:59');
-                if (!moment().diff(startDay,'week')){
+                if (moment().isoWeek()==moment(startDay).isoWeek()){
                     this.setState({cramday:startDay})
                 }
                 for(let j in tasksSorted[i]){
                     var color = '#FF0000';
-                    if (moment().diff(startDay,'day')){
+                    if (moment().diff(this.state.cramday,'day')){
                         color = '#3CB043';
                     }
                     var startTime = moment(startDay).subtract(tasksSorted[i][j].timeNeed,'hours').format("YYYY-MM-DDTHH:mm:ss");
@@ -61,8 +63,23 @@ export default class Timetable extends Component{
                     startDay=startTime;
                 }
             }
-            console.log(moment(this.state.cramday).day());
-            this.setState({event:cramEvents})
+            var thisMonday = moment(this.state.cramday).subtract(moment(this.state.cramday).isoWeekday()-1,'day');
+            var restDays = [];
+            for (let i=0;i<7;i++) {
+                var thisWeekDay=moment(thisMonday).add(i,'day');
+                if(this.state.cramday.length!=0){
+                    if (moment(thisWeekDay).diff(this.state.cramday,'day')){
+                        restDays.push({title:this.generateRandomDistraction(),start:moment(thisWeekDay).format('YYYY-MM-DDT06:00:01'),
+                        end:moment(thisWeekDay).format('YYYY-MM-DDT09:00:00'),durationEditable:'true'})
+                    }
+                }
+                else{
+                    restDays.push({title:this.generateRandomDistraction(),start:moment(thisWeekDay).format('YYYY-MM-DDT06:00:01'),
+                        end:moment(thisWeekDay).format('YYYY-MM-DDT09:00:00'),durationEditable:'true'})
+                }
+            }
+            this.setState({chillDays:restDays});
+            this.setState({event:cramEvents.concat(restDays)});
             
         })
         .catch((error) => {
@@ -70,13 +87,13 @@ export default class Timetable extends Component{
         })
       }
       generateRandomDistraction(){
-          let distractions = ['Facebook','Youtube','Netflix','Twitter','Twitch',]
+          var distractions = ['browse Facebook','watch Youtube','watch Netflix','browse Twitter','watch Twitch',
+          'play CS go','play Fortnite', 'play League of Legends','play Valorant']
 
-          let getPosition = Math.floor(Math.random * distractions.length)
-
+          var getPosition = Math.floor(Math.random() * distractions.length)
           for(let i = 0; i<distractions.length; i++){
               if(i == getPosition){
-                  return distractions[i]
+                  return 'Try: '+distractions[i]
               }
           }
 
